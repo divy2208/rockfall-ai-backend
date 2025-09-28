@@ -1,0 +1,42 @@
+{
+  "name": "Student Rockfall Risk Model Dataset",
+  "description": "Dataset generated to exactly match current student_rockfall_prototype.py algorithm",
+  "total_samples": 10000,
+  "features": {
+    "slope_angle": "float (30-90 degrees)",
+    "slope_height": "float (100-800 feet)",
+    "rock_type": "string (Granite/Limestone/Sandstone/Shale)",
+    "fracture_density": "string (Low/Medium/High)",
+    "rainfall_24h": "float (0-60 mm)",
+    "days_since_blast": "int (0-30 days)"
+  },
+  "target": {
+    "risk_score": "float (0.05-0.95)",
+    "risk_percentage": "float (5-95)",
+    "risk_category": "string (Low/Medium/High/Critical)"
+  },
+  "algorithm": {
+    "type": "Weighted combination with interaction effects",
+    "weights": {
+      "slope_angle": 0.25,
+      "slope_height": 0.2,
+      "rock_type": 0.2,
+      "fracture_density": 0.15,
+      "rainfall_24h": 0.1,
+      "days_since_blast": 0.1
+    },
+    "interaction_bonuses": {
+      "perfect_storm": 0.25,
+      "high_risk_combo": 0.15,
+      "moderate_risk_combo": 0.08
+    },
+    "range": "5% to 95%"
+  },
+  "validation": {
+    "accuracy": "<100%",
+    "test_samples": 1000,
+    "matches_original": false
+  },
+  "created": "2025-09-28T00:33:43.379731",
+  "source": "Generated from student_rockfall_prototype.py algorithm"
+}

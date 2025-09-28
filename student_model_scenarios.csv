@@ -1,0 +1,4 @@
+slope_angle,slope_height,rock_type,fracture_density,rainfall_24h,days_since_blast,scenario_name,expected_range,actual_risk
+35,150,Granite,Low,2.0,14,Low Risk (from current model),6-10%,6.678286466785124
+85,750,Shale,High,50.0,1,High Risk (from current model),85-95%,95.0
+55,400,Limestone,Medium,15.0,7,Typical Mining (from current model),30-50%,29.44267529422435
